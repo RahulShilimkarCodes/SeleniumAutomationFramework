@@ -16,7 +16,7 @@ public class JSONUtility {
 		Gson gsonReader = new Gson();
 		//to read data from json, we need to use external library called Gson.
 		
-		File jsonFile = new File(System.getProperty("user.dir")+"\\config\\config.json");
+		File jsonFile = new File(System.getProperty("user.dir")+"//config//config.json");
 		
 		FileReader fileReader = null;
 		try {

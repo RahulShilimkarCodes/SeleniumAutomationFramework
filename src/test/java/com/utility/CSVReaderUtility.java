@@ -18,7 +18,7 @@ public class CSVReaderUtility {
 	public static Iterator<DataPOJO> readCSVFile(String fileName)
 	{
 		
-		File csvFile = new File(System.getProperty("user.dir")+"\\testData\\"+fileName);
+		File csvFile = new File(System.getProperty("user.dir")+"//testData//"+fileName);
 		
 		FileReader csvfileReader = null;
 		CSVReader csvReader;

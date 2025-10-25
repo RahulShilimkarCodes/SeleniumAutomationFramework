@@ -19,7 +19,7 @@ public class ExcelUtility {
 	
 	public static Iterator<DataPOJO> readExcelFile(String fileName) 
 	{
-		File dataFile = new File(System.getProperty("user.dir")+"\\testData\\"+fileName);
+		File dataFile = new File(System.getProperty("user.dir")+"//testData//"+fileName);
 		
 		XSSFWorkbook readWorkbook = null;
 		try {

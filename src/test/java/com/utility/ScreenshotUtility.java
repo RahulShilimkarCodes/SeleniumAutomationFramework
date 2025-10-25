@@ -22,7 +22,7 @@ public class ScreenshotUtility {
 		SimpleDateFormat format = new SimpleDateFormat("HH-mm-ss");
 		String timeStamp = format.format(date);
 		
-		String failureScreenshotPath = System.getProperty("user.dir")+"//screenshots//"+name+"-"+timeStamp+".png";
+		String failureScreenshotPath = "./screenshots/"+name+"-"+timeStamp+".png";
 		File failureScreenshot = new File(failureScreenshotPath);
 			
 		try {
