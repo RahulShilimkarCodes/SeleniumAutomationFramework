@@ -71,30 +71,18 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 	public BrowserUtility(Browser browserName, boolean isHeadLess)
 	{
 		if(browserName==Browser.CHROME)
-		{
-		    ChromeOptions options = new ChromeOptions();
-		    
-		    // Common arguments (work everywhere - local & CI)
-			options.addArguments("disable-gpu");
-			options.addArguments("--window-size=1920,1080");
-			options.addArguments("--disable-extensions");
-		    options.addArguments("--disable-gpu");
-		    options.addArguments("--no-first-run");
-		    options.addArguments("--no-default-browser-check");
-		    options.addArguments("--no-sandbox");
-		    options.addArguments("--disable-dev-shm-usage");
-		    options.addArguments("--remote-allow-origins=*");
-
-			 // ✅ Use a unique temp folder each run
-		    options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chrome-" + System.currentTimeMillis());
-
-		    
+		{   
 		    if(isHeadLess)
 		    {
-		        options.addArguments("--headless=new");
+		    	ChromeOptions options = new ChromeOptions();
+				options.addArguments("--headless=old"); // headless
+				options.addArguments("--window-size=1920,1080");
+				driver.set(new ChromeDriver(options));
+		    }
+		    else {
+		    	driver.set(new ChromeDriver());
 		    }
 		    
-		    driver.set(new ChromeDriver(options));
 		}
 		
 		else if(browserName==Browser.EDGE)
@@ -103,7 +91,6 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 				EdgeOptions options = new EdgeOptions();
 				options.addArguments("--headless=old");
 				options.addArguments("disable-gpu");
-				options.addArguments("--window-size=1920,1080");
 				driver.set(new EdgeDriver(options));
 			}
 
