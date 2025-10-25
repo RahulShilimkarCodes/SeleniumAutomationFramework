@@ -75,7 +75,7 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 			if(isHeadLess)
 			{
 				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless");		//browser in headless mode..
+				options.addArguments("--headless=new");		//browser in headless mode..
 				options.addArguments("--disable-notifications");
 				options.addArguments("--window-size=1920,1080");
 				options.addArguments("--headless=new"); // for Chrome >109
@@ -95,9 +95,10 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		}
 		else if(browserName==Browser.EDGE)
 		{
+			EdgeOptions options = new EdgeOptions();
 			if(isHeadLess)
 			{
-				EdgeOptions options = new EdgeOptions();
+				
 				options.addArguments("--headless=new");  // "--headless" also works
 				options.addArguments("--no-sandbox");
 				options.addArguments("--disable-dev-shm-usage");
@@ -111,6 +112,13 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 			else
 			{
 				driver.set(new EdgeDriver());
+				options.addArguments("--no-sandbox");
+				options.addArguments("--disable-dev-shm-usage");
+				options.addArguments("--window-size=1920,1080");
+
+				// Use a unique user data directory
+				options.addArguments("--user-data-dir=/tmp/edge-user-data-" + System.currentTimeMillis());
+				options.addArguments("--remote-allow-origins=*");
 			}
 			
 		}
