@@ -62,7 +62,8 @@
 		</dependency>
 
 
-		<!-- both the below apache poi and apache poi-ooxml are used to read data from excel-->
+		<!-- both the below apache poi and apache poi-ooxml are used to read
+		data from excel-->
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -78,11 +79,13 @@
 		</dependency>
 
 		<!--
-	//the main reason of logging the custom logging is to be able to debug the issue's faster and fix the scripts rather than relying on library logs..
+	//the main reason of logging the custom logging is to be able to debug the
+		issue's faster and fix the scripts rather than relying on library logs..
 //this is more useful when we have more number of components in the framework..
 //we use log4j library for this...'
  -->
-		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<!--
+		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>

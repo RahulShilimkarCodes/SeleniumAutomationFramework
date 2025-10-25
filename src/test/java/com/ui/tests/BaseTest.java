@@ -24,11 +24,12 @@ public class BaseTest {
 	
 	@Parameters({"browser","isHeadLess","isLambdaTest"})
 	@BeforeMethod(description = "Loading homepage of the website")
+	
 	public void setUpBrowser(
-			@Optional("chrome") String browser, 				//optional - specifies the default value it should give if we are running
-			@Optional("false") boolean isHeadLess, 				//			 without XML file
-			@Optional("false") boolean isLambdaTest, 
-			ITestResult result)
+		    @Optional("Chrome") String browser,
+		    @Optional("false") boolean isHeadLess,
+		    @Optional("false") boolean isLambdaTest,
+		    ITestResult result)
 	{
 		WebDriver remoteLambdaDriver;
 		this.isLambdaTest =  isLambdaTest;		//this is done because we need to send isLambdaTest to tear down method as well
