@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="methods" name="Failed suite [automation framework]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="4" parallel="methods" name="API Automation framework(failed)" verbose="0">
+    <parameter name="isHeadLess" value=""/>
+    <parameter name="browser" value=""/>
+    <parameter name="isLambdaTest" value=""/>
+    <classes>
+      <class name="com.ui.tests.LoginTests">
+        <methods>
+          <include name="LoginTest"/>
+          <include name="setUpBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ui.tests.LoginTests -->
+    </classes>
+  </test> <!-- API Automation framework(failed) -->
+</suite> <!-- Failed suite [automation framework] -->

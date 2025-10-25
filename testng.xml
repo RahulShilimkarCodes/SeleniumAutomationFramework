@@ -3,8 +3,8 @@
 <suite name="automation framework" thread-count="4" parallel="methods">
 	<test name="API Automation framework">
 
-		<parameter name="isHeadLess" value="${isHeadLess}"></parameter>
-		<parameter name="isLambdaTest" value="${isLambdaTest}"></parameter>
+		<parameter name="isHeadLess" value="${isHeadLess}"></parameter>		<!--${isHeadLess}  - command line -> pom.xml -> testNG.xml-->
+		<parameter name="isLambdaTest" value="${isLambdaTest}"></parameter>	<!--${isLambdaTest}  - used to access value from pom.xml -->
 		<parameter name="browser" value="${browser}"></parameter>			<!--${browser}  - used to access value from pom.xml -->
 		<classes>
 			<class name="com.ui.tests.LoginTests">

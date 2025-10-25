@@ -26,7 +26,7 @@ public class BaseTest {
 	@BeforeMethod(description = "Loading homepage of the website")
 	
 	public void setUpBrowser(
-		    @Optional("Chrome") String browser,
+		    @Optional("chrome") String browser,
 		    @Optional("false") boolean isHeadLess,
 		    @Optional("false") boolean isLambdaTest,
 		    ITestResult result)
@@ -41,7 +41,7 @@ public class BaseTest {
 		else
 		{
 			logger.info("Loading the HomePage");
-			homePage = new HomePage(Browser.valueOf(browser.toUpperCase()),isHeadLess);
+			homePage = new HomePage(Browser.valueOf(browser.trim().toUpperCase()),isHeadLess);
 		}
 		
 		//homePage = new HomePage(Browser.CHROME);		- above line is same to this,since we have static import for Enum Browser
