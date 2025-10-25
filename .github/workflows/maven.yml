@@ -23,39 +23,43 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Install Google Chrome
+    # Install required dependencies for Chrome and Edge
+    - name: Install Browsers and Dependencies
       run: |
         sudo apt update
-        sudo apt install -y wget unzip xvfb libxi6 libgconf-2-4 default-jdk google-chrome-stable
-        # Install latest ChromeDriver
-        LATEST_CHROME=$(google-chrome --version | awk '{print $3}')
-        echo "Chrome version: $LATEST_CHROME"
-        LATEST_DRIVER=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
-        echo "ChromeDriver version: $LATEST_DRIVER"
-        wget -O /tmp/chromedriver_linux64.zip "https://chromedriver.storage.googleapis.com/$LATEST_DRIVER/chromedriver_linux64.zip"
-        unzip /tmp/chromedriver_linux64.zip -d $HOME
-        chmod +x $HOME/chromedriver
-        export PATH=$HOME:$PATH
+        sudo apt install -y wget unzip curl xvfb fonts-liberation libxss1 libappindicator3-1 libatk-bridge2.0-0 libgtk-3-0
 
-    - name: Install Microsoft Edge + EdgeDriver
-      run: |
+        # Install Chrome
+        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/google-linux-signing-key.gpg
+        echo "deb [signed-by=/usr/share/keyrings/google-linux-signing-key.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+        sudo apt update
+        sudo apt install -y google-chrome-stable
+
+        # Install Edge
         curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
         sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
         sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge.list'
         sudo apt update
         sudo apt install -y microsoft-edge-stable
+
+    # Install ChromeDriver (match with installed Chrome version)
+    - name: Install ChromeDriver
+      run: |
+        CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d '.' -f 1)
+        wget -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION"
+        wget -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/$CHROME_VERSION/chromedriver_linux64.zip"
+        unzip /tmp/chromedriver.zip -d /usr/local/bin/
+        chmod +x /usr/local/bin/chromedriver
+
+    # Install EdgeDriver (latest stable)
+    - name: Install EdgeDriver
+      run: |
         EDGE_VERSION=$(microsoft-edge --version | awk '{print $3}')
-        echo "Edge version: $EDGE_VERSION"
+        EDGE_MAJOR=$(echo $EDGE_VERSION | cut -d '.' -f1)
         wget -O /tmp/edgedriver.zip "https://msedgedriver.azureedge.net/$EDGE_VERSION/edgedriver_linux64.zip"
-        unzip /tmp/edgedriver.zip -d $HOME
-        chmod +x $HOME/msedgedriver
-        export PATH=$HOME:$PATH
-          
-          # Verify installations
-          google-chrome --version
-          chromedriver --version
-          microsoft-edge --version
-          msedgedriver --version
+        unzip /tmp/edgedriver.zip -d /usr/local/bin/
+        chmod +x /usr/local/bin/msedgedriver
+
         
     - name: Running the tests with Maven
       run: mvn test -Dbrowser=edge -DisHeadLess=false -DisLambdaTest=false 
