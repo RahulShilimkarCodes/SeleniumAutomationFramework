@@ -21,6 +21,14 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+        
+    - name: Install Chrome
+      uses: browser-actions/setup-chrome@latest
+      with:
+        chrome-version: stable
+    
+    - name: Display Chrome version
+      run: chrome --version
 
     # Run tests with Maven
     - name: Run Selenium Tests
