@@ -30,6 +30,12 @@ jobs:
     - name: Display Chrome version
       run: chrome --version
 
+    - name: Clean any existing Chrome processes
+      run: |
+        pkill -f chrome || true
+        pkill -f chromedriver || true
+        rm -rf /tmp/chrome_profile_* || true
+
     # Run tests with Maven
     - name: Run Selenium Tests
       run: mvn test -Dbrowser=chrome -DisHeadLess=false -DisLambdaTest=false
