@@ -22,53 +22,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    # Cache Maven dependencies
-    - name: Cache Maven
-      uses: actions/cache@v3
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: ${{ runner.os }}-maven-
-
-    # Install required dependencies for Chrome and Edge
-    - name: Install Browsers and dependencies
-      run: |
-        sudo apt update
-        sudo apt install -y wget unzip curl xvfb fonts-liberation libxss1 libappindicator3-1 libatk-bridge2.0-0 libgtk-3-0
-
-        # Install Chrome
-        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/google-linux-signing-key.gpg
-        echo "deb [signed-by=/usr/share/keyrings/google-linux-signing-key.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-        sudo apt update
-        sudo apt install -y google-chrome-stable
-
-        # Install Edge
-        curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-        sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-        sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge.list'
-        sudo apt update
-        sudo apt install -y microsoft-edge-stable
-
-    # Install ChromeDriver (matches installed Chrome)
-    - name: Install ChromeDriver
-      run: |
-        CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d '.' -f 1)
-        LATEST=$(curl -sS "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
-        wget -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip"
-        unzip /tmp/chromedriver.zip -d /usr/local/bin/
-        chmod +x /usr/local/bin/chromedriver
-
-    # Install EdgeDriver (latest stable)
-    - name: Install EdgeDriver
-      run: |
-        EDGE_LATEST=$(curl -sS https://msedgedriver.azureedge.net/LATEST_RELEASE)
-        wget -O /tmp/edgedriver.zip "https://msedgedriver.azureedge.net/$EDGE_LATEST/edgedriver_linux64.zip"
-        unzip /tmp/edgedriver.zip -d /usr/local/bin/
-        chmod +x /usr/local/bin/msedgedriver
-
     # Run tests with Maven
     - name: Run Selenium Tests
-      run: mvn test -Dbrowser=edge -DisHeadLess=false -DisLambdaTest=false
+      run: mvn test -Dbrowser=chrome -DisHeadLess=false -DisLambdaTest=false
 
     # Upload logs
     - name: Upload logs
