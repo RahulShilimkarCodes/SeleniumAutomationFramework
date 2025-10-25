@@ -83,12 +83,6 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		    options.addArguments("--disable-extensions");
 		    options.addArguments("--disable-popup-blocking");
 		    
-		    // CRITICAL: Add unique user data directory to prevent conflicts
-		    String uniqueProfile = "/tmp/chrome_profile_" + 
-		                          System.currentTimeMillis() + "_" + 
-		                          Thread.currentThread().getId();
-		    options.addArguments("--user-data-dir=" + uniqueProfile);
-		    
 		    if(isHeadLess)
 		    {
 		        options.addArguments("--headless=new");
