@@ -98,11 +98,10 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 			EdgeOptions options = new EdgeOptions();
 			
 			 // Common options for both headless and non-headless
-		    options.addArguments("--no-sandbox");
-		    options.addArguments("--disable-dev-shm-usage");
-		    options.addArguments("--window-size=1920,1080");
-		    options.addArguments("--user-data-dir=/tmp/edge-user-data-" + System.currentTimeMillis());
-		    options.addArguments("--remote-allow-origins=*");
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
+			options.addArguments("--window-size=1920,1080");
+			options.addArguments("--remote-allow-origins=*");
 		    
 		    if(isHeadLess) {
 		        options.addArguments("--headless=new"); // Headless mode
