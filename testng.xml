@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="automation framework" thread-count="4" parallel="methods">
+	<test name="API Automation framework">
+
+		<parameter name="isHeadLess" value="${isHeadLess}"></parameter>
+		<parameter name="isLambdaTest" value="${isLambdaTest}"></parameter>
+		<parameter name="browser" value="${browser}"></parameter>			<!--${browser}  - used to access value from pom.xml -->
+		<classes>
+			<class name="com.ui.tests.LoginTests">
+				<methods>
+					<include name="LoginTest" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+</suite>

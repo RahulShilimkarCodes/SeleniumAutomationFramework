@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+	<!-- Appenders - it means where do you want to show your logs..-->
+	<Appenders>
+
+		<!-- show the log 4j logs in the console..-->
+		<Console name="Console" target="SYSTEM_OUT">
+
+			<!-- PatternLayout denotes how the output will be shown to us-->
+			<!-- Format -timeStamp, thread name, typeOfLog(warning/status/error) fullClassName MethodName LineNumber message newLine -->
+			<PatternLayout
+				pattern="%d{YYYY-MM-dd HH:mm:ss} [%t] %level %logger::%M::%L %msg %n">
+			</PatternLayout>
+
+		</Console>
+		
+		
+		<File name="FileLogger" fileName="logs/automationScripts.log" append="false">
+			<PatternLayout
+				pattern="%d{YYYY-MM-dd HH:mm:ss} [%t] %level %logger::%M::%L %msg %n">
+			</PatternLayout>
+		
+		</File>
+
+	</Appenders>
+
+	<Loggers>
+	
+	<Root level="info">
+		<AppenderRef ref="Console"></AppenderRef>
+		<AppenderRef ref="FileLogger"></AppenderRef>
+	</Root>
+	
+	<!-- different levels of logs..
+	
+	trace - largest level of logs..used for loops, state of instance variable...contains all the information about the application..
+	debug - used for complex code functioning..
+	info - information about the method calls, execution, events being called..
+	warning - warning messages in the code..
+	error logs - errors or try catch exception failure or assertion ..
+	fatal - unable to connect to database,etc. ..
+	
+	now since we selected info - all below info i.e info,warning,error logs and fatal will be captured
+	
+	-->
+
+	</Loggers>
+
+
+</configuration>
