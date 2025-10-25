@@ -106,11 +106,7 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		    if(isHeadLess) {
 		        options.addArguments("--headless=new"); // Headless mode
 		    }
-			
-			else
-			{
 				driver.set(new EdgeDriver(options));
-			}
 			
 		}
 		else if(browserName==Browser.FIREFOX)
