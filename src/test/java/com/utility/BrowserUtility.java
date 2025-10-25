@@ -77,6 +77,14 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		    // Common arguments (work everywhere - local & CI)
 			options.addArguments("disable-gpu");
 			options.addArguments("--window-size=1920,1080");
+			options.addArguments("--disable-extensions");
+		    options.addArguments("--disable-gpu");
+		    options.addArguments("--no-first-run");
+		    options.addArguments("--no-default-browser-check");
+		    options.addArguments("--no-sandbox");
+		    options.addArguments("--disable-dev-shm-usage");
+		    options.addArguments("--remote-allow-origins=*");
+
 			 // ✅ Use a unique temp folder each run
 		    options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chrome-" + System.currentTimeMillis());
 
