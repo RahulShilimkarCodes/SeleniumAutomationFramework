@@ -105,8 +105,6 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 
 				// Use a unique user data directory
 				options.addArguments("--user-data-dir=/tmp/edge-user-data-" + System.currentTimeMillis());
-
-				// Allow remote origins if needed (for latest Selenium + Edge)
 				options.addArguments("--remote-allow-origins=*");
 				driver.set(new EdgeDriver(options));
 			}
