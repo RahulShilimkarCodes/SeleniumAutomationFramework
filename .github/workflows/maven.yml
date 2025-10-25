@@ -21,6 +21,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    - name: Clean old Chrome/Edge profiles
+      run: rm -rf /tmp/chrome-profile-* /tmp/edge-profile-* || true
+
 
     # Run tests with Maven
     - name: Run Selenium Tests
