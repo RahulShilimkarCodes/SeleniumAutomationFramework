@@ -77,6 +77,9 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		    // Common arguments (work everywhere - local & CI)
 			options.addArguments("disable-gpu");
 			options.addArguments("--window-size=1920,1080");
+			 // ✅ Use a unique temp folder each run
+		    options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chrome-" + System.currentTimeMillis());
+
 		    
 		    if(isHeadLess)
 		    {

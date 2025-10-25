@@ -1,7 +1,7 @@
-2025-10-25 12:38:07 [main] INFO com.ui.listeners.LoggerListener::onStart::24 Test Suite Started 
-2025-10-25 12:38:07 [TestNG-test-API Automation framework-1] INFO com.ui.tests.LoginTests::setUpBrowser::43 Loading the HomePage 
-2025-10-25 12:38:15 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::30 LoginTest 
-2025-10-25 12:38:15 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::31 Login with valid credentials 
-2025-10-25 12:38:15 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::32 [Sanity, e2e] 
-2025-10-25 12:38:18 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestSuccess::39 LoginTest     PASSED 
-2025-10-25 12:38:19 [main] INFO com.ui.listeners.LoggerListener::onFinish::59 Test Suite Completed 
+2025-10-25 12:41:46 [main] INFO com.ui.listeners.LoggerListener::onStart::24 Test Suite Started 
+2025-10-25 12:41:47 [TestNG-test-API Automation framework-1] INFO com.ui.tests.LoginTests::setUpBrowser::43 Loading the HomePage 
+2025-10-25 12:41:54 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::30 LoginTest 
+2025-10-25 12:41:54 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::31 Login with valid credentials 
+2025-10-25 12:41:54 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::32 [Sanity, e2e] 
+2025-10-25 12:41:57 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestSuccess::39 LoginTest     PASSED 
+2025-10-25 12:41:57 [main] INFO com.ui.listeners.LoggerListener::onFinish::59 Test Suite Completed 
