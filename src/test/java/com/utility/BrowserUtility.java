@@ -96,29 +96,21 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		else if(browserName==Browser.EDGE)
 		{
 			EdgeOptions options = new EdgeOptions();
-			if(isHeadLess)
-			{
-				
-				options.addArguments("--headless=new");  // "--headless" also works
-				options.addArguments("--no-sandbox");
-				options.addArguments("--disable-dev-shm-usage");
-				options.addArguments("--window-size=1920,1080");
-
-				// Use a unique user data directory
-				options.addArguments("--user-data-dir=/tmp/edge-user-data-" + System.currentTimeMillis());
-				options.addArguments("--remote-allow-origins=*");
-				driver.set(new EdgeDriver(options));
-			}
+			
+			 // Common options for both headless and non-headless
+		    options.addArguments("--no-sandbox");
+		    options.addArguments("--disable-dev-shm-usage");
+		    options.addArguments("--window-size=1920,1080");
+		    options.addArguments("--user-data-dir=/tmp/edge-user-data-" + System.currentTimeMillis());
+		    options.addArguments("--remote-allow-origins=*");
+		    
+		    if(isHeadLess) {
+		        options.addArguments("--headless=new"); // Headless mode
+		    }
+			
 			else
 			{
-				driver.set(new EdgeDriver());
-				options.addArguments("--no-sandbox");
-				options.addArguments("--disable-dev-shm-usage");
-				options.addArguments("--window-size=1920,1080");
-
-				// Use a unique user data directory
-				options.addArguments("--user-data-dir=/tmp/edge-user-data-" + System.currentTimeMillis());
-				options.addArguments("--remote-allow-origins=*");
+				driver.set(new EdgeDriver(options));
 			}
 			
 		}
