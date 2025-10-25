@@ -78,6 +78,14 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 				options.addArguments("--headless");		//browser in headless mode..
 				options.addArguments("--disable-notifications");
 				options.addArguments("--window-size=1920,1080");
+				options.addArguments("--headless=new"); // for Chrome >109
+		        options.addArguments("--disable-gpu");
+		        options.addArguments("--no-sandbox");
+		        options.addArguments("--disable-dev-shm-usage");
+		        options.addArguments("--window-size=1920,1080");
+		        options.addArguments("--remote-allow-origins=*");
+		        // Optional: specify user data dir for CI to avoid conflicts
+		        options.addArguments("--user-data-dir=/tmp/chrome-user-data-" + System.currentTimeMillis());
 				driver.set(new ChromeDriver(options));
 			}
 			else

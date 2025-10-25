@@ -2,7 +2,7 @@
 <testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-25T11:17:01 IST" name="automation framework" finished-at="2025-10-25T11:17:09 IST" duration-ms="8162">
+  <suite started-at="2025-10-25T11:23:57 IST" name="automation framework" finished-at="2025-10-25T11:24:07 IST" duration-ms="10227">
     <groups>
       <group name="Sanity">
         <method signature="LoginTests.LoginTest()[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" name="LoginTest" class="com.ui.tests.LoginTests"/>
@@ -11,9 +11,9 @@
         <method signature="LoginTests.LoginTest()[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" name="LoginTest" class="com.ui.tests.LoginTests"/>
       </group> <!-- e2e -->
     </groups>
-    <test started-at="2025-10-25T11:17:01 IST" name="API Automation framework" finished-at="2025-10-25T11:17:09 IST" duration-ms="8162">
+    <test started-at="2025-10-25T11:23:57 IST" name="API Automation framework" finished-at="2025-10-25T11:24:07 IST" duration-ms="10227">
       <class name="com.ui.tests.LoginTests">
-        <test-method is-config="true" signature="setUpBrowser(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" started-at="2025-10-25T11:17:01 IST" name="setUpBrowser" description="Loading homepage of the website" finished-at="2025-10-25T11:17:07 IST" duration-ms="5631" status="PASS">
+        <test-method is-config="true" signature="setUpBrowser(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" started-at="2025-10-25T11:23:57 IST" name="setUpBrowser" description="Loading homepage of the website" finished-at="2025-10-25T11:24:04 IST" duration-ms="7080" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,11 +39,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method signature="LoginTest()[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" started-at="2025-10-25T11:17:07 IST" name="LoginTest" description="Login with valid credentials" finished-at="2025-10-25T11:17:09 IST" duration-ms="2003" status="PASS">
+        <test-method signature="LoginTest()[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" started-at="2025-10-25T11:24:04 IST" name="LoginTest" description="Login with valid credentials" finished-at="2025-10-25T11:24:07 IST" duration-ms="2647" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" started-at="2025-10-25T11:17:09 IST" name="tearDown" description="Closing the Browser" finished-at="2025-10-25T11:17:09 IST" duration-ms="246" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" started-at="2025-10-25T11:24:07 IST" name="tearDown" description="Closing the Browser" finished-at="2025-10-25T11:24:07 IST" duration-ms="296" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
