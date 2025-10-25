@@ -147,7 +147,7 @@
 &lt;suite thread-count=&quot;4&quot; parallel=&quot;methods&quot; name=&quot;automation framework&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;4&quot; parallel=&quot;methods&quot; name=&quot;API Automation framework&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;isHeadLess&quot; value=&quot;false&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;parameter name=&quot;isLambdaTest&quot; value=&quot;false&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.ui.tests.LoginTests&quot;&gt;
@@ -214,12 +214,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'LoginTest')
 data.setCell(0, 2, 'com.ui.tests.LoginTests')
-data.setCell(0, 3, 1968);
+data.setCell(0, 3, 2003);
 window.suiteTableData['automation_framework']= { tableData: data, tableDiv: 'times-div-automation_framework'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-automation_framework">
               </div> <!-- times-div-automation_framework -->
             </div> <!-- times-div -->
@@ -258,16 +258,16 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.ui.tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBrowser(firefox, false, false, [TestResult name={null} status=CREATED method=LoginTests.LoginTest()[pri:0, i...)</span>
+                <span class="method-name">setUpBrowser(chrome, false, false, [TestResult name={null} status=CREATED method=LoginTests.LoginTest()[pri:0, in...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginTest</span>
-                <span class="method-start">13794 ms</span>
+                <span class="method-start">5635 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15776 ms</span>
+                <span class="method-start">7654 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -26,7 +26,7 @@ public class BaseTest {
 	@BeforeMethod(description = "Loading homepage of the website")
 	
 	public void setUpBrowser(
-		    @Optional("chrome") String browser,
+		    @Optional("Chrome") String browser,
 		    @Optional("false") boolean isHeadLess,
 		    @Optional("false") boolean isLambdaTest,
 		    ITestResult result)
