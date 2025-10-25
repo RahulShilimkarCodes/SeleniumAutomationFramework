@@ -75,13 +75,8 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		    ChromeOptions options = new ChromeOptions();
 		    
 		    // Common arguments (work everywhere - local & CI)
-		    options.addArguments("--no-sandbox");
-		    options.addArguments("--disable-dev-shm-usage");
-		    options.addArguments("--disable-gpu");
-		    options.addArguments("--window-size=1920,1080");
-		    options.addArguments("--remote-allow-origins=*");
-		    options.addArguments("--disable-extensions");
-		    options.addArguments("--disable-popup-blocking");
+			options.addArguments("disable-gpu");
+			options.addArguments("--window-size=1920,1080");
 		    
 		    if(isHeadLess)
 		    {
