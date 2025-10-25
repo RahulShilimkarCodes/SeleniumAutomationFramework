@@ -98,10 +98,16 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 			if(isHeadLess)
 			{
 				EdgeOptions options = new EdgeOptions();
-				options.addArguments("--headless");		//browser in headless mode..
-				options.addArguments("--disable-notifications");
-				options.addArguments("--disable-gpu");
+				options.addArguments("--headless=new");  // "--headless" also works
+				options.addArguments("--no-sandbox");
+				options.addArguments("--disable-dev-shm-usage");
 				options.addArguments("--window-size=1920,1080");
+
+				// Use a unique user data directory
+				options.addArguments("--user-data-dir=/tmp/edge-user-data-" + System.currentTimeMillis());
+
+				// Allow remote origins if needed (for latest Selenium + Edge)
+				options.addArguments("--remote-allow-origins=*");
 				driver.set(new EdgeDriver(options));
 			}
 			else
