@@ -74,18 +74,10 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		{
 			if(isHeadLess)
 			{
+				
 				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless=new");		//browser in headless mode..
-				options.addArguments("--disable-notifications");
+				options.addArguments("--headless=old"); // headless
 				options.addArguments("--window-size=1920,1080");
-				options.addArguments("--headless=new"); // for Chrome >109
-		        options.addArguments("--disable-gpu");
-		        options.addArguments("--no-sandbox");
-		        options.addArguments("--disable-dev-shm-usage");
-		        options.addArguments("--window-size=1920,1080");
-		        options.addArguments("--remote-allow-origins=*");
-		        // Optional: specify user data dir for CI to avoid conflicts
-		        options.addArguments("--user-data-dir=/tmp/chrome-user-data-" + System.currentTimeMillis());
 				driver.set(new ChromeDriver(options));
 			}
 			else
@@ -93,20 +85,21 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 				driver.set(new ChromeDriver());
 			}
 		}
+		
 		else if(browserName==Browser.EDGE)
 		{
-			EdgeOptions options = new EdgeOptions();
-			
-			 // Common options for both headless and non-headless
-			options.addArguments("--no-sandbox");
-			options.addArguments("--disable-dev-shm-usage");
-			options.addArguments("--window-size=1920,1080");
-			options.addArguments("--remote-allow-origins=*");
-		    
-		    if(isHeadLess) {
-		        options.addArguments("--headless=new"); // Headless mode
-		    }
+			if (isHeadLess) {
+				EdgeOptions options = new EdgeOptions();
+				options.addArguments("--headless=old");
+				options.addArguments("disable-gpu");
+				options.addArguments("--window-size=1920,1080");
 				driver.set(new EdgeDriver(options));
+			}
+
+			else {
+				driver.set(new EdgeDriver());
+
+			}
 			
 		}
 		else if(browserName==Browser.FIREFOX)
