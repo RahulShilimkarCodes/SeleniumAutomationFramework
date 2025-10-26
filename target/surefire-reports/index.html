@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-automation_framework" class="navigator-link">
-              <span class="suite-name border-passed">automation framework</span>
+              <span class="suite-name border-skipped">automation framework</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-automation_framework" class="hide-methods passed suite-automation_framework"> (hide)</a> <!-- hide-methods passed suite-automation_framework -->
-                      <a href="#" panel-name="suite-automation_framework" class="show-methods passed suite-automation_framework"> (show)</a> <!-- show-methods passed suite-automation_framework -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-automation_framework" class="hide-methods skipped suite-automation_framework"> (hide)</a> <!-- hide-methods skipped suite-automation_framework -->
+                      <a href="#" panel-name="suite-automation_framework" class="show-methods skipped suite-automation_framework"> (show)</a> <!-- show-methods skipped suite-automation_framework -->
                     </span>
-                    <div class="method-list-content passed suite-automation_framework">
+                    <div class="method-list-content skipped suite-automation_framework">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-automation_framework" title="com.ui.tests.LoginTests" class="method navigator-link" hash-for-method="LoginTest">LoginTest</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-automation_framework" title="com.ui.tests.InvalidLoginTest" class="method navigator-link" hash-for-method="invalidLoginCheck">invalidLoginCheck</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-automation_framework -->
+                    </div> <!-- method-list-content skipped suite-automation_framework -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,23 +118,34 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-automation_framework" class="panel automation_framework">
-          <div class="suite-automation_framework-class-passed">
+          <div class="suite-automation_framework-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.ui.tests.LoginTests</span>
+              <img src="skipped.png"/>
+              <span class="class-name">com.ui.tests.InvalidLoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LoginTest">
-                  </a> <!-- LoginTest -->
-                  <span class="method-name">LoginTest</span>
+                  <a name="invalidLoginCheck">
+                  </a> <!-- invalidLoginCheck -->
+                  <span class="method-name">invalidLoginCheck</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: No enum constant com.constants.Browser.
+	at java.base/java.lang.Enum.valueOf(Enum.java:293)
+	at com.constants.Browser.valueOf(Browser.java:3)
+	at com.ui.tests.BaseTest.setUpBrowser(BaseTest.java:44)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(Login with valid credentials)                  </em>
+(verifying invalid login error message)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-automation_framework-class-passed -->
+          </div> <!-- suite-automation_framework-class-skipped -->
         </div> <!-- panel automation_framework -->
         <div panel-name="test-xml-automation_framework" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -146,15 +157,15 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;4&quot; parallel=&quot;methods&quot; name=&quot;automation framework&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;4&quot; parallel=&quot;methods&quot; name=&quot;API Automation framework&quot; verbose=&quot;0&quot;&gt;
-    &lt;parameter name=&quot;isHeadLess&quot; value=&quot;false&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;parameter name=&quot;isLambdaTest&quot; value=&quot;false&quot;/&gt;
+    &lt;parameter name=&quot;isHeadLess&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;isLambdaTest&quot; value=&quot;&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.ui.tests.LoginTests&quot;&gt;
+      &lt;class name=&quot;com.ui.tests.InvalidLoginTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;LoginTest&quot;/&gt;
+          &lt;include name=&quot;invalidLoginCheck&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.ui.tests.LoginTests --&gt;
+      &lt;/class&gt; &lt;!-- com.ui.tests.InvalidLoginTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- API Automation framework --&gt;
 &lt;/suite&gt; &lt;!-- automation framework --&gt;
@@ -179,18 +190,18 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">Sanity</span>
+              <span class="test-group-name">e2e</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">LoginTest</span>
+                <span class="method-in-group-name">invalidLoginCheck</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
-              <span class="test-group-name">e2e</span>
+              <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">LoginTest</span>
+                <span class="method-in-group-name">invalidLoginCheck</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -212,14 +223,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LoginTest')
-data.setCell(0, 2, 'com.ui.tests.LoginTests')
-data.setCell(0, 3, 2589);
+data.setCell(0, 1, 'invalidLoginCheck')
+data.setCell(0, 2, 'com.ui.tests.InvalidLoginTest')
+data.setCell(0, 3, 0);
 window.suiteTableData['automation_framework']= { tableData: data, tableDiv: 'times-div-automation_framework'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-automation_framework">
               </div> <!-- times-div-automation_framework -->
             </div> <!-- times-div -->
@@ -234,20 +245,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-automation_framework" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.ui.tests.LoginTests</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">LoginExcelTest</span>
-                <br/>
-                <span class="ignored-method-name">LoginJSONTest</span>
-                <br/>
-                <span class="ignored-method-name">LoginCSVTest</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-automation_framework" class="panel">
@@ -256,18 +256,16 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.ui.tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.ui.tests.InvalidLoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBrowser(chrome, false, false, [TestResult name={null} status=CREATED method=LoginTests.LoginTest()[pri:0, in...)</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setUpBrowser(, false, false, [TestResult name={null} status=CREATED method=InvalidLoginTest.invalidLoginCheck()[p...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">LoginTest</span>
-                <span class="method-start">8309 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10912 ms</span>
+                <span class="method-start">36 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

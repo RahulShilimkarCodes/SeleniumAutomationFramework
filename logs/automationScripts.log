@@ -1,7 +1,7 @@
-2025-10-25 13:14:46 [main] INFO com.ui.listeners.LoggerListener::onStart::24 Test Suite Started 
-2025-10-25 13:14:46 [TestNG-test-API Automation framework-1] INFO com.ui.tests.LoginTests::setUpBrowser::43 Loading the HomePage 
-2025-10-25 13:14:55 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::30 LoginTest 
-2025-10-25 13:14:55 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::31 Login with valid credentials 
-2025-10-25 13:14:55 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::32 [Sanity, e2e] 
-2025-10-25 13:14:57 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestSuccess::39 LoginTest     PASSED 
-2025-10-25 13:14:58 [main] INFO com.ui.listeners.LoggerListener::onFinish::59 Test Suite Completed 
+2025-10-26 21:38:37 [main] INFO com.ui.listeners.LoggerListener::onStart::24 Test Suite Started 
+2025-10-26 21:38:37 [main] INFO com.ui.tests.ProductTest::setUpBrowser::45 Loading the HomePage 
+2025-10-26 21:38:52 [main] INFO com.ui.listeners.LoggerListener::onTestStart::30 verifyingAllProductNames 
+2025-10-26 21:38:52 [main] INFO com.ui.listeners.LoggerListener::onTestStart::31 verifying all the products are as per search 
+2025-10-26 21:38:52 [main] INFO com.ui.listeners.LoggerListener::onTestStart::32 [] 
+2025-10-26 21:38:55 [main] INFO com.ui.listeners.LoggerListener::onTestSuccess::39 verifyingAllProductNames     PASSED 
+2025-10-26 21:38:56 [main] INFO com.ui.listeners.LoggerListener::onFinish::59 Test Suite Completed 

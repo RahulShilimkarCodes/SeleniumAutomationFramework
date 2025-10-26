@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-25T13:14:46 IST" name="automation framework" finished-at="2025-10-25T13:14:57 IST" duration-ms="11687">
+  <suite started-at="2025-10-26T18:19:05 IST" name="automation framework" finished-at="2025-10-26T18:19:05 IST" duration-ms="70">
     <groups>
-      <group name="Sanity">
-        <method signature="LoginTests.LoginTest()[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" name="LoginTest" class="com.ui.tests.LoginTests"/>
-      </group> <!-- Sanity -->
+      <group name="smoke">
+        <method signature="InvalidLoginTest.invalidLoginCheck()[pri:0, instance:com.ui.tests.InvalidLoginTest@56c4278e]" name="invalidLoginCheck" class="com.ui.tests.InvalidLoginTest"/>
+      </group> <!-- smoke -->
       <group name="e2e">
-        <method signature="LoginTests.LoginTest()[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" name="LoginTest" class="com.ui.tests.LoginTests"/>
+        <method signature="InvalidLoginTest.invalidLoginCheck()[pri:0, instance:com.ui.tests.InvalidLoginTest@56c4278e]" name="invalidLoginCheck" class="com.ui.tests.InvalidLoginTest"/>
       </group> <!-- e2e -->
     </groups>
-    <test started-at="2025-10-25T13:14:46 IST" name="API Automation framework" finished-at="2025-10-25T13:14:57 IST" duration-ms="11687">
-      <class name="com.ui.tests.LoginTests">
-        <test-method is-config="true" signature="setUpBrowser(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" started-at="2025-10-25T13:14:46 IST" name="setUpBrowser" description="Loading homepage of the website" finished-at="2025-10-25T13:14:55 IST" duration-ms="8306" status="PASS">
+    <test started-at="2025-10-26T18:19:05 IST" name="API Automation framework" finished-at="2025-10-26T18:19:05 IST" duration-ms="70">
+      <class name="com.ui.tests.InvalidLoginTest">
+        <test-method is-config="true" signature="setUpBrowser(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.InvalidLoginTest@56c4278e]" started-at="2025-10-26T18:19:05 IST" name="setUpBrowser" description="Loading homepage of the website" finished-at="2025-10-26T18:19:05 IST" duration-ms="28" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="1">
@@ -32,22 +32,86 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=LoginTests.LoginTest()[pri:0, instance:com.ui.tests.LoginTests@119cbf96] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=InvalidLoginTest.invalidLoginCheck()[pri:0, instance:com.ui.tests.InvalidLoginTest@56c4278e] output={null}]]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[No enum constant com.constants.Browser.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: No enum constant com.constants.Browser.
+at java.base/java.lang.Enum.valueOf(Enum.java:293)
+at com.constants.Browser.valueOf(Browser.java:3)
+at com.ui.tests.BaseTest.setUpBrowser(BaseTest.java:44)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method signature="LoginTest()[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" started-at="2025-10-25T13:14:55 IST" name="LoginTest" description="Login with valid credentials" finished-at="2025-10-25T13:14:57 IST" duration-ms="2589" status="PASS">
+        <test-method signature="invalidLoginCheck()[pri:0, instance:com.ui.tests.InvalidLoginTest@56c4278e]" started-at="2025-10-26T18:19:05 IST" name="invalidLoginCheck" description="verifying invalid login error message" finished-at="2025-10-26T18:19:05 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[No enum constant com.constants.Browser.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: No enum constant com.constants.Browser.
+at java.base/java.lang.Enum.valueOf(Enum.java:293)
+at com.constants.Browser.valueOf(Browser.java:3)
+at com.ui.tests.BaseTest.setUpBrowser(BaseTest.java:44)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ui.tests.LoginTests@119cbf96]" started-at="2025-10-25T13:14:57 IST" name="tearDown" description="Closing the Browser" finished-at="2025-10-25T13:14:57 IST" duration-ms="256" status="PASS">
+        </test-method> <!-- invalidLoginCheck -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ui.tests.InvalidLoginTest@56c4278e]" started-at="2025-10-26T18:19:05 IST" name="tearDown" description="Closing the Browser" finished-at="2025-10-26T18:19:05 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ui.tests.LoginTests -->
+      </class> <!-- com.ui.tests.InvalidLoginTest -->
     </test> <!-- API Automation framework -->
   </suite> <!-- automation framework -->
 </testng-results>

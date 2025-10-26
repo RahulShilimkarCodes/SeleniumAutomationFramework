@@ -6,13 +6,13 @@
     <parameter name="browser" value=""/>
     <parameter name="isLambdaTest" value=""/>
     <classes>
-      <class name="com.ui.tests.LoginTests">
+      <class name="com.ui.tests.InvalidLoginTest">
         <methods>
-          <include name="LoginTest"/>
+          <include name="invalidLoginCheck"/>
           <include name="setUpBrowser"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.ui.tests.LoginTests -->
+      </class> <!-- com.ui.tests.InvalidLoginTest -->
     </classes>
   </test> <!-- API Automation framework(failed) -->
 </suite> <!-- Failed suite [automation framework] -->

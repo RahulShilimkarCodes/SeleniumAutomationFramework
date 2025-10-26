@@ -27,11 +27,14 @@ public final class HomePage extends BrowserUtility{
 
 	private static final By SIGN_IN_LOCATOR = By.xpath("//a[@class='login']");
 	
+	
 	public LoginPage goToLoginPage()
 	{
 		clickOn(SIGN_IN_LOCATOR);
 		LoginPage loginPage = new LoginPage(getDriver());		//passing driver session to loginPage...
 		return loginPage;
 	}
+	
+	
 
 }

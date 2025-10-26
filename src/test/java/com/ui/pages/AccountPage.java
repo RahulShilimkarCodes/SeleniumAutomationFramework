@@ -7,6 +7,8 @@ import com.utility.BrowserUtility;
 
 public final class AccountPage extends BrowserUtility{
 	
+	private static final By ENTER_SEARCH_PRODUCT = By.id("search_query_top");
+	private static final By CLICK_SEARCH_PRODUCT = By.name("submit_search");
 
 	public AccountPage(WebDriver driver)				//subclass must call param constructor of base/parent class
 	{
@@ -19,6 +21,16 @@ public final class AccountPage extends BrowserUtility{
 	{
 		return getVisibleText(USER_NAME_LOCATOR);
 	}
+	
+	public ProductPage searchProduct(String productText)
+	{
+		enterText(ENTER_SEARCH_PRODUCT, productText);
+		clickOn(CLICK_SEARCH_PRODUCT);
+		
+		ProductPage productPage = new ProductPage(getDriver());
+		return productPage;
+	}
+	
 	
 	
 	

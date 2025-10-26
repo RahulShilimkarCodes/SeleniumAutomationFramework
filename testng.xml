@@ -2,14 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="automation framework" thread-count="4" parallel="methods">
 	<test name="API Automation framework">
-
+	
+		<parameter name="browser" value="${browser}" />				<!--${browser}  - used to access value from pom.xml -->
 		<parameter name="isHeadLess" value="${isHeadLess}" />	 	<!-- command line -> pom.xml -> testNG-->
 		<parameter name="isLambdaTest" value="${isLambdaTest}" />
-		<parameter name="browser" value="${browser}" />				<!--${browser}  - used to access value from pom.xml -->
+		
 		<classes>
-			<class name="com.ui.tests.LoginTests">
+			<class name="com.ui.tests.InvalidLoginTest">
 				<methods>
-					<include name="LoginTest" />
+					<include name="invalidLoginCheck" />
 				</methods>
 			</class>
 		</classes>

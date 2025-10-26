@@ -3,7 +3,9 @@ package com.utility;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -160,6 +162,38 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		}
 	}
 	
+	public static List<WebElement> getListOfElements(By locator)
+	{
+		List<WebElement> products = getDriver().findElements(locator);
+		return products;
+	}
+	
+	public static void getAllVisibleText(List<WebElement>  elements)
+	{
+		for(WebElement element : elements)
+		{
+			//System.out.println(element.getText());
+			System.out.println(getVisibleText(element));
+		}
+
+	}
+	
+	public static List<String> getAllVisibleTextList(List<WebElement>  elements)
+	{
+		List<String> productsText = new ArrayList<>();
+		
+		for(WebElement element : elements)
+		{
+			productsText.add(getVisibleText(element));
+		}
+		
+		return productsText;
+	}
+	
+	public static String getVisibleText(WebElement element)
+	{
+		return element.getText();
+	}
 	
 
 }

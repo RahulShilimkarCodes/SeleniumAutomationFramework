@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
@@ -16,6 +17,7 @@ import com.utility.BrowserUtility;
 import com.utility.LambdaTestUtility;
 import com.utility.LoggerUtility;
 
+@Listeners({com.ui.listeners.LoggerListener.class})
 public class BaseTest {
 	
 	protected HomePage homePage;
@@ -26,7 +28,7 @@ public class BaseTest {
 	@BeforeMethod(description = "Loading homepage of the website")
 	
 	public void setUpBrowser(
-		    @Optional("Chrome") String browser,
+		    @Optional("edge") String browser,
 		    @Optional("false") boolean isHeadLess,
 		    @Optional("false") boolean isLambdaTest,
 		    ITestResult result)
