@@ -9,6 +9,7 @@ public final class AccountPage extends BrowserUtility{
 	
 	private static final By ENTER_SEARCH_PRODUCT = By.id("search_query_top");
 	private static final By CLICK_SEARCH_PRODUCT = By.name("submit_search");
+	private static final By ADD_MY_FIRST_ADDRESS = By.xpath("//a[@title='Add my first address']");
 
 	public AccountPage(WebDriver driver)				//subclass must call param constructor of base/parent class
 	{
@@ -29,6 +30,14 @@ public final class AccountPage extends BrowserUtility{
 		
 		ProductPage productPage = new ProductPage(getDriver());
 		return productPage;
+	}
+	
+	public AddressPage clickingOnAddFirstAddress()
+	{
+		clickOn(ADD_MY_FIRST_ADDRESS);
+		
+		AddressPage addressPage = new AddressPage(getDriver());
+		return addressPage;
 	}
 	
 	

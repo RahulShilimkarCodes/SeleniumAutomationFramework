@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-26T21:38:37 IST" name="Default suite" finished-at="2025-10-26T21:38:56 IST" duration-ms="18860">
+  <suite started-at="2025-10-28T00:35:29 IST" name="Default suite" finished-at="2025-10-28T00:35:44 IST" duration-ms="15742">
     <groups>
     </groups>
-    <test started-at="2025-10-26T21:38:37 IST" name="Default test" finished-at="2025-10-26T21:38:56 IST" duration-ms="18860">
-      <class name="com.ui.tests.ProductTest">
-        <test-method is-config="true" signature="setUpBrowser(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.ProductTest@363a52f]" started-at="2025-10-26T21:38:37 IST" name="setUpBrowser" description="Loading homepage of the website" finished-at="2025-10-26T21:38:50 IST" duration-ms="13079" status="PASS">
+    <test started-at="2025-10-28T00:35:29 IST" name="Default test" finished-at="2025-10-28T00:35:44 IST" duration-ms="15742">
+      <class name="com.ui.tests.AddNewAddressTest">
+        <test-method is-config="true" signature="setUpBrowser(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.AddNewAddressTest@61fe30]" started-at="2025-10-28T00:35:29 IST" name="setUpBrowser" description="Loading homepage of the website" finished-at="2025-10-28T00:35:37 IST" duration-ms="8406" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,26 +26,22 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=ProductTest.verifyingAllProductNames()[pri:0, instance:com.ui.tests.ProductTest@363a52f] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=AddNewAddressTest.addingNewAddres()[pri:0, instance:com.ui.tests.AddNewAddressTest@61fe30] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method is-config="true" signature="loginSetUp()[pri:0, instance:com.ui.tests.ProductTest@363a52f]" started-at="2025-10-26T21:38:50 IST" name="loginSetUp" description="Logging in as the valid user in the application" finished-at="2025-10-26T21:38:52 IST" duration-ms="2030" status="PASS">
+        <test-method is-config="true" signature="loginUserSetUp()[pri:0, instance:com.ui.tests.AddNewAddressTest@61fe30]" started-at="2025-10-28T00:35:37 IST" name="loginUserSetUp" finished-at="2025-10-28T00:35:41 IST" duration-ms="4305" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginSetUp -->
-        <test-method signature="verifyingAllProductNames()[pri:0, instance:com.ui.tests.ProductTest@363a52f]" started-at="2025-10-26T21:38:52 IST" name="verifyingAllProductNames" description="verifying all the products are as per search" finished-at="2025-10-26T21:38:55 IST" duration-ms="3452" status="PASS">
+        </test-method> <!-- loginUserSetUp -->
+        <test-method signature="addingNewAddres()[pri:0, instance:com.ui.tests.AddNewAddressTest@61fe30]" started-at="2025-10-28T00:35:41 IST" name="addingNewAddres" finished-at="2025-10-28T00:35:44 IST" duration-ms="2974" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyingAllProductNames -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ui.tests.ProductTest@363a52f]" started-at="2025-10-26T21:38:55 IST" name="tearDown" description="Closing the Browser" finished-at="2025-10-26T21:38:56 IST" duration-ms="249" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.ui.tests.ProductTest -->
+        </test-method> <!-- addingNewAddres -->
+      </class> <!-- com.ui.tests.AddNewAddressTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

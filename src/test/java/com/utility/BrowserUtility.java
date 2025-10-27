@@ -19,6 +19,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.ui.Select;
 
 import com.constants.Browser;
 
@@ -147,20 +148,19 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		element.sendKeys(text);
 	}
 	
+	public static void clearText(By locator)
+	{
+		WebElement element = getDriver().findElement(locator);
+		element.clear();
+	}
+	
 	public static String getVisibleText(By locator)
 	{
 		WebElement visibleText = getDriver().findElement(locator);
 		return visibleText.getText();
 	}
 	
-	public static void quitDriver()
-	{
-		if(getDriver() != null)
-		{
-			getDriver().quit();
-			driver.remove();		// cleanup ThreadLocal reference/memory
-		}
-	}
+	
 	
 	public static List<WebElement> getListOfElements(By locator)
 	{
@@ -195,5 +195,37 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		return element.getText();
 	}
 	
+	public static Select enterDropdown(By locator)
+	{
+		WebElement dropdownElement = getDriver().findElement(locator);
+		Select sc = new Select(dropdownElement);
+		return sc;
+	}
+	
+	public static void selectOptionByVisibleText(By locator, String visibleText)
+	{
+		enterDropdown(locator).selectByVisibleText(visibleText);
+	}
+	
+	public static void selectOptionByValue(By locator, String value)
+	{
+		enterDropdown(locator).selectByValue(value);
+	}
+	
+	public static void selectOptionByIndex(By locator, int index)
+	{
+		enterDropdown(locator).selectByIndex(index);
+	}
+	
+	
+	
+	public static void quitDriver()
+	{
+		if(getDriver() != null)
+		{
+			getDriver().quit();
+			driver.remove();		// cleanup ThreadLocal reference/memory
+		}
+	}
 
 }
