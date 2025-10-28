@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -142,6 +143,26 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		element.click();
 	}
 	
+	public static void clickOn(WebElement element)
+	{
+		element.click();
+	}
+	
+	public static void jsClickOn(By locator)
+	{
+		WebElement element = getDriver().findElement(locator);
+		JavascriptExecutor js = (JavascriptExecutor)getDriver();
+		
+		js.executeScript("arguments[0].click();", element);
+	}
+	
+	public static void jsScrollToElement(By locator)
+	{
+		WebElement element = getDriver().findElement(locator);
+		JavascriptExecutor js = (JavascriptExecutor)getDriver();
+		
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
 	public static void enterText(By locator , String text )
 	{
 		WebElement element = getDriver().findElement(locator);
@@ -217,6 +238,23 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		enterDropdown(locator).selectByIndex(index);
 	}
 	
+	public static void acceptAlert()
+	{
+		getDriver().switchTo().alert().accept();
+	}
+	
+	public static void dismissAlert()
+	{
+		getDriver().switchTo().alert().accept();
+	}
+	
+	public static void printStringList(List<String> listValue)
+	{
+		for(String list : listValue)
+		{
+			System.out.println(list);
+		}
+	}
 	
 	
 	public static void quitDriver()

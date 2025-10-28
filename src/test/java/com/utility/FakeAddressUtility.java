@@ -21,7 +21,7 @@ public class FakeAddressUtility {
 		String mobilePhone = faker.phoneNumber().cellPhone();
 		//String additionalInfo = faker.lorem().sentence();
 		String additionalInfo = faker.lorem().characters(10);
-		String addressTitle = faker.regexify("[A-Za-z0-9]{10}");
+		String addressTitle = faker.options().option("Home Address", "Office Address", "Vacation Address");
 		
 		AddressPOJO address = new AddressPOJO(companyName,addressLine1,addressLine2,city,state,zipCode,homePhone,mobilePhone,additionalInfo,addressTitle);
 		return address;

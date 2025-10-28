@@ -1,5 +1,7 @@
 package com.ui.tests;
 
+import java.util.List;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -11,7 +13,7 @@ import com.ui.pages.AccountPage;
 public class ProductTest extends BaseTest{
 	
 	private AccountPage accountPage;
-	public static final String ITEM_TO_SEARCH = "printed summer dress";
+	public static final String ITEM_TO_SEARCH = "printed chiffon dress";
 	
 	@BeforeMethod(description="Logging in as the valid user in the application")
 	public void loginSetUp()
@@ -32,6 +34,7 @@ public class ProductTest extends BaseTest{
 	{	
 		accountPage.searchProduct(ITEM_TO_SEARCH).getProductNames();
 	}
+	
 	
 	@Test(description="verifying all the products are as per search")
 	public void verifyingAllProductNames() throws InterruptedException

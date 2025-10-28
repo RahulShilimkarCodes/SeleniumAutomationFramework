@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ui.tests.AddNewAddressTest">
+      <class name="com.ui.tests.ProductCheckoutTest">
         <methods>
+          <include name="checkOutSetup"/>
+          <include name="checkOutProduct"/>
           <include name="setUpBrowser"/>
-          <include name="addingNewAddres"/>
-          <include name="loginUserSetUp"/>
         </methods>
-      </class> <!-- com.ui.tests.AddNewAddressTest -->
+      </class> <!-- com.ui.tests.ProductCheckoutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

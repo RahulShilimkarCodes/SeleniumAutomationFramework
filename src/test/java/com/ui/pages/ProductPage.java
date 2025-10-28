@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import com.utility.BrowserUtility;
 
@@ -29,6 +30,12 @@ public class ProductPage extends BrowserUtility{
 		getAllVisibleText(getListOfElements(PRODUCT_NAMES));
 	}
 	
+	public List<String> getProductNamesList()
+	{
+		return getAllVisibleTextList(getListOfElements(PRODUCT_NAMES));
+	}
+	
+	
 	public boolean verifyProductNameMatch(String searchTerms)
 	{
 		List<String> allProductNames = getAllVisibleTextList(getListOfElements(PRODUCT_NAMES));
@@ -41,6 +48,24 @@ public class ProductPage extends BrowserUtility{
 		
 		return isMatched;
 	}
+	
+	public ItemsPage clickOnDesiredProduct(String searchTerms)
+	{
+		List<WebElement> productLists = getListOfElements(PRODUCT_NAMES);
+		
+		for(WebElement product : productLists)
+		{
+			if(product.getText().equalsIgnoreCase(searchTerms))
+			{
+				clickOn(product);
+				break;
+			}
+		}
+		
+		ItemsPage itemsPage = new ItemsPage(getDriver());
+		return itemsPage;
+	}
+
 	
 	
 	

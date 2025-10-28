@@ -25,9 +25,9 @@ public class AddressPage extends BrowserUtility{
 	private static final By MOBILE_PHONE = By.id("phone_mobile");
 	private static final By ADDITIONAL_INFO = By.id("other");
 	private static final By ADDRESS_TITLE = By.id("alias");
-	private static final By SAVE_ADDRESS = By.id("submitAddress");
+	private static final By SAVE_ADDRESS_BUTTON = By.id("submitAddress");
 	
-	public void savingAddressDetails(AddressPOJO addressPOJO)
+	public ExistingAddressPage savingAddressDetails(AddressPOJO addressPOJO)
 	{
 		enterText(COMPANY, addressPOJO.getCompany());
 		enterText(ADDRESS, addressPOJO.getAddressLine1());
@@ -41,7 +41,10 @@ public class AddressPage extends BrowserUtility{
 		clearText(ADDRESS_TITLE);
 		enterText(ADDRESS_TITLE, addressPOJO.getAddressTitle());
 		
-		clickOn(SAVE_ADDRESS);
+		clickOn(SAVE_ADDRESS_BUTTON);
+		
+		ExistingAddressPage existingAddress = new ExistingAddressPage(getDriver());
+		return existingAddress;
 		
 	}
 	
