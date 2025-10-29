@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results retried="3" ignored="0" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-29T22:53:41 IST" name="automation framework" finished-at="2025-10-29T22:54:06 IST" duration-ms="24832">
+  <suite started-at="2025-10-29T23:22:11 IST" name="automation framework" finished-at="2025-10-29T23:23:49 IST" duration-ms="98582">
     <groups>
     </groups>
-    <test started-at="2025-10-29T22:53:41 IST" name="API Automation framework" finished-at="2025-10-29T22:54:06 IST" duration-ms="24832">
+    <test started-at="2025-10-29T23:22:11 IST" name="API Automation framework" finished-at="2025-10-29T23:23:49 IST" duration-ms="98582">
       <class name="com.ui.tests.CompleteOrderTest">
-        <test-method is-config="true" signature="setUpBrowser(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T22:53:41 IST" name="setUpBrowser" description="Loading homepage of the website" finished-at="2025-10-29T22:53:47 IST" duration-ms="5860" status="PASS">
+        <test-method is-config="true" signature="setUpBrowser(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:22:11 IST" name="setUpBrowser" description="Loading homepage of the website" finished-at="2025-10-29T23:22:20 IST" duration-ms="9574" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,7 +16,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[false]]>
+                <![CDATA[true]]>
               </value>
             </param>
             <param index="2">
@@ -33,15 +33,249 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method is-config="true" signature="checkOutSetup()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T22:53:47 IST" name="checkOutSetup" description="user logs into the application and searches the product" finished-at="2025-10-29T22:53:50 IST" duration-ms="2734" status="PASS">
+        <test-method is-config="true" signature="checkOutSetup()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:22:20 IST" name="checkOutSetup" description="user logs into the application and searches the product" finished-at="2025-10-29T23:22:24 IST" duration-ms="3546" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkOutSetup -->
-        <test-method signature="completeOrder()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T22:53:50 IST" name="completeOrder" description="end to end order completion" finished-at="2025-10-29T22:54:06 IST" duration-ms="15486" status="PASS">
+        <test-method retried="true" signature="completeOrder()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:22:24 IST" name="completeOrder" description="end to end order completion" finished-at="2025-10-29T23:22:38 IST" duration-ms="13580" status="SKIP">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(@class,'product_quantity_up')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\silim\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53495}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53495/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a2e9ca2aab09534f43c6a16ed5d47e80]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(@class,'product_quantity_up')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\silim\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53495}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53495/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a2e9ca2aab09534f43c6a16ed5d47e80
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.utility.BrowserUtility.clickOn(BrowserUtility.java:169)
+at com.ui.pages.ItemsPage.incrementItems(ItemsPage.java:31)
+at com.ui.tests.CompleteOrderTest.completeOrder(CompleteOrderTest.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- completeOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T22:54:06 IST" name="tearDown" description="Closing the Browser" finished-at="2025-10-29T22:54:06 IST" duration-ms="458" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:22:38 IST" name="tearDown" description="Closing the Browser" finished-at="2025-10-29T23:22:38 IST" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUpBrowser(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:22:38 IST" name="setUpBrowser" description="Loading homepage of the website" finished-at="2025-10-29T23:22:44 IST" duration-ms="6479" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=CompleteOrderTest.completeOrder()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method is-config="true" signature="checkOutSetup()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:22:44 IST" name="checkOutSetup" description="user logs into the application and searches the product" finished-at="2025-10-29T23:22:47 IST" duration-ms="2359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOutSetup -->
+        <test-method retried="true" signature="completeOrder()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:22:47 IST" name="completeOrder" description="end to end order completion" finished-at="2025-10-29T23:23:00 IST" duration-ms="13809" status="SKIP">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(@class,'product_quantity_up')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\silim\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53941}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53941/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f8c06e61e93f59fb1d254b422ca43fd8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(@class,'product_quantity_up')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\silim\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53941}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53941/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f8c06e61e93f59fb1d254b422ca43fd8
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.utility.BrowserUtility.clickOn(BrowserUtility.java:169)
+at com.ui.pages.ItemsPage.incrementItems(ItemsPage.java:31)
+at com.ui.tests.CompleteOrderTest.completeOrder(CompleteOrderTest.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completeOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:23:00 IST" name="tearDown" description="Closing the Browser" finished-at="2025-10-29T23:23:01 IST" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUpBrowser(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:23:01 IST" name="setUpBrowser" description="Loading homepage of the website" finished-at="2025-10-29T23:23:07 IST" duration-ms="6756" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=CompleteOrderTest.completeOrder()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method is-config="true" signature="checkOutSetup()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:23:07 IST" name="checkOutSetup" description="user logs into the application and searches the product" finished-at="2025-10-29T23:23:10 IST" duration-ms="2443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOutSetup -->
+        <test-method retried="true" signature="completeOrder()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:23:10 IST" name="completeOrder" description="end to end order completion" finished-at="2025-10-29T23:23:23 IST" duration-ms="13128" status="SKIP">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(@class,'product_quantity_up')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\silim\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55379}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55379/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d84c5247629d1ccfcd37e0508591dbf9]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(@class,'product_quantity_up')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\silim\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55379}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55379/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d84c5247629d1ccfcd37e0508591dbf9
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.utility.BrowserUtility.clickOn(BrowserUtility.java:169)
+at com.ui.pages.ItemsPage.incrementItems(ItemsPage.java:31)
+at com.ui.tests.CompleteOrderTest.completeOrder(CompleteOrderTest.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completeOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:23:23 IST" name="tearDown" description="Closing the Browser" finished-at="2025-10-29T23:23:23 IST" duration-ms="210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUpBrowser(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:23:23 IST" name="setUpBrowser" description="Loading homepage of the website" finished-at="2025-10-29T23:23:31 IST" duration-ms="7451" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=CompleteOrderTest.completeOrder()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method is-config="true" signature="checkOutSetup()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:23:31 IST" name="checkOutSetup" description="user logs into the application and searches the product" finished-at="2025-10-29T23:23:33 IST" duration-ms="2362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOutSetup -->
+        <test-method signature="completeOrder()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:23:33 IST" name="completeOrder" description="end to end order completion" finished-at="2025-10-29T23:23:49 IST" duration-ms="16042" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completeOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ui.tests.CompleteOrderTest@455b6df1]" started-at="2025-10-29T23:23:49 IST" name="tearDown" description="Closing the Browser" finished-at="2025-10-29T23:23:49 IST" duration-ms="212" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

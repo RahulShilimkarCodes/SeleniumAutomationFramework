@@ -90,7 +90,7 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		    if(isHeadLess)
 		    {
 		    	ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless=old"); // headless
+				options.addArguments("--headless"); // headless
 				options.addArguments("--window-size=1920,1080");
 				driver.set(new ChromeDriver(options));
 				wait = new WebDriverWait(driver.get(),Duration.ofSeconds(10L));
@@ -106,7 +106,7 @@ public abstract class BrowserUtility {		//abstract class can have constructor, b
 		{
 			if (isHeadLess) {
 				EdgeOptions options = new EdgeOptions();
-				options.addArguments("--headless=old");
+				options.addArguments("--headless");
 				options.addArguments("disable-gpu");
 				driver.set(new EdgeDriver(options));
 				wait = new WebDriverWait(driver.get(),Duration.ofSeconds(10L));

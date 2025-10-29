@@ -1,7 +1,22 @@
-2025-10-29 22:53:41 [main] INFO com.ui.listeners.LoggerListener::onStart::24 Test Suite Started 
-2025-10-29 22:53:42 [TestNG-test-API Automation framework-1] INFO com.ui.tests.CompleteOrderTest::setUpBrowser::45 Loading the HomePage 
-2025-10-29 22:53:50 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::30 completeOrder 
-2025-10-29 22:53:50 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::31 end to end order completion 
-2025-10-29 22:53:50 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::32 [] 
-2025-10-29 22:54:06 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestSuccess::39 completeOrder     PASSED 
-2025-10-29 22:54:07 [main] INFO com.ui.listeners.LoggerListener::onFinish::59 Test Suite Completed 
+2025-10-29 23:22:11 [main] INFO com.ui.listeners.LoggerListener::onStart::24 Test Suite Started 
+2025-10-29 23:22:11 [TestNG-test-API Automation framework-1] INFO com.ui.tests.CompleteOrderTest::setUpBrowser::45 Loading the HomePage 
+2025-10-29 23:22:24 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::30 completeOrder 
+2025-10-29 23:22:24 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::31 end to end order completion 
+2025-10-29 23:22:24 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::32 [] 
+2025-10-29 23:22:38 [TestNG-test-API Automation framework-1] WARN com.ui.listeners.LoggerListener::onTestSkipped::51 completeOrder       SKIPPED 
+2025-10-29 23:22:38 [TestNG-test-API Automation framework-1] INFO com.ui.tests.CompleteOrderTest::setUpBrowser::45 Loading the HomePage 
+2025-10-29 23:22:47 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::30 completeOrder 
+2025-10-29 23:22:47 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::31 end to end order completion 
+2025-10-29 23:22:47 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::32 [] 
+2025-10-29 23:23:00 [TestNG-test-API Automation framework-1] WARN com.ui.listeners.LoggerListener::onTestSkipped::51 completeOrder       SKIPPED 
+2025-10-29 23:23:01 [TestNG-test-API Automation framework-1] INFO com.ui.tests.CompleteOrderTest::setUpBrowser::45 Loading the HomePage 
+2025-10-29 23:23:10 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::30 completeOrder 
+2025-10-29 23:23:10 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::31 end to end order completion 
+2025-10-29 23:23:10 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::32 [] 
+2025-10-29 23:23:23 [TestNG-test-API Automation framework-1] WARN com.ui.listeners.LoggerListener::onTestSkipped::51 completeOrder       SKIPPED 
+2025-10-29 23:23:23 [TestNG-test-API Automation framework-1] INFO com.ui.tests.CompleteOrderTest::setUpBrowser::45 Loading the HomePage 
+2025-10-29 23:23:33 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::30 completeOrder 
+2025-10-29 23:23:33 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::31 end to end order completion 
+2025-10-29 23:23:33 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestStart::32 [] 
+2025-10-29 23:23:49 [TestNG-test-API Automation framework-1] INFO com.ui.listeners.LoggerListener::onTestSuccess::39 completeOrder     PASSED 
+2025-10-29 23:23:50 [main] INFO com.ui.listeners.LoggerListener::onFinish::59 Test Suite Completed 

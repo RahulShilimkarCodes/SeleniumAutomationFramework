@@ -2,17 +2,18 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="4" parallel="methods" name="Failed suite [automation framework]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="4" parallel="methods" name="API Automation framework(failed)" verbose="0">
-    <parameter name="isHeadLess" value=""/>
-    <parameter name="browser" value=""/>
-    <parameter name="isLambdaTest" value=""/>
+    <parameter name="isHeadLess" value="true"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="isLambdaTest" value="false"/>
     <classes>
-      <class name="com.ui.tests.InvalidLoginTest">
+      <class name="com.ui.tests.CompleteOrderTest">
         <methods>
-          <include name="invalidLoginCheck"/>
           <include name="setUpBrowser"/>
+          <include name="completeOrder"/>
+          <include name="checkOutSetup"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.ui.tests.InvalidLoginTest -->
+      </class> <!-- com.ui.tests.CompleteOrderTest -->
     </classes>
   </test> <!-- API Automation framework(failed) -->
 </suite> <!-- Failed suite [automation framework] -->

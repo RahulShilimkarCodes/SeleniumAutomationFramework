@@ -11,7 +11,7 @@ public class ExtentReportListener implements ITestListener{
 	
 	
 	  public void onStart(ITestContext context) {
-		    ExtentReportUtility.setUpSparkReporter("LoginExtentReport");
+		    ExtentReportUtility.setUpSparkReporter("testExtentReport");
 	  }
 	
 	  public void onTestStart(ITestResult result) {
