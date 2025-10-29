@@ -41,7 +41,9 @@ public class ExistingAddressPage extends BrowserUtility{
 	
 	public ShippingPage confirmAddress()
 	{
-		jsClickOn(CONFIRM_ADDRESS);
+		//jsClickOn(CONFIRM_ADDRESS);
+		clickOn(CONFIRM_ADDRESS);
+		
 		ShippingPage shippingPage = new ShippingPage(getDriver());
 		return shippingPage;
 	}

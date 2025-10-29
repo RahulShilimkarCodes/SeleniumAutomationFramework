@@ -5,8 +5,8 @@
     <classes>
       <class name="com.ui.tests.ProductCheckoutTest">
         <methods>
+          <include name="completeOrder"/>
           <include name="checkOutSetup"/>
-          <include name="checkOutProduct"/>
           <include name="setUpBrowser"/>
         </methods>
       </class> <!-- com.ui.tests.ProductCheckoutTest -->

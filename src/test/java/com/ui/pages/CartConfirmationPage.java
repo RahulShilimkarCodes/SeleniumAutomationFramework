@@ -16,7 +16,7 @@ public class CartConfirmationPage extends BrowserUtility{
 	
 	public ShoppingCartPage proceedToCheckout()
 	{
-		jsClickOn(PROCEED_TO_CHECKOUT);
+		clickOn(PROCEED_TO_CHECKOUT);
 		ShoppingCartPage sc = new ShoppingCartPage(getDriver());
 		return sc;
 	}

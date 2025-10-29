@@ -17,7 +17,7 @@ public class ShoppingCartPage extends BrowserUtility{
 	public ExistingAddressPage confirmCartSummary()
 	{
 		jsScrollToElement(PROCEED_TO_CHECKOUT);
-		jsClickOn(PROCEED_TO_CHECKOUT);
+		clickOn(PROCEED_TO_CHECKOUT);
 		
 		ExistingAddressPage existingAddressPage  = new ExistingAddressPage(getDriver());
 		return existingAddressPage;

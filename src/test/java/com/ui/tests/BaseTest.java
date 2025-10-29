@@ -49,7 +49,7 @@ public class BaseTest {
 		//homePage = new HomePage(Browser.CHROME);		- above line is same to this,since we have static import for Enum Browser
 	}
 	
-	//@AfterMethod(description = "Closing the Browser",alwaysRun = true)
+	@AfterMethod(description = "Closing the Browser",alwaysRun = true)
 	public void tearDown()
 	{
 		

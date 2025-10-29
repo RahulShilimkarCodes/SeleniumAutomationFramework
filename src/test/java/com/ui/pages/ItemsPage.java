@@ -1,6 +1,7 @@
 package com.ui.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 
 import com.constants.Browser;
@@ -27,14 +28,15 @@ public class ItemsPage extends BrowserUtility {
 	
 	public ItemsPage incrementItems()
 	{
-		jsClickOn(INCREMENT_PRODUCT);
+		clickOn(INCREMENT_PRODUCT);		
+		
 		ItemsPage itemsPage = new ItemsPage(getDriver());
 		return itemsPage;
 	}
 	
 	public CartConfirmationPage addToCart()
 	{
-		jsClickOn(ADD_TO_CART);
+		clickOn(ADD_TO_CART);
 		
 		CartConfirmationPage cartConfirmationPage = new CartConfirmationPage(getDriver());
 		return cartConfirmationPage;
