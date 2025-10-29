@@ -38,46 +38,7 @@ Before running this framework, ensure the following are installed on your system
 | Reporting | Extent Reports |
 | Cloud Platform | LambdaTest |
 
----
 
-## 🛠️ Setup Instructions
-
-###  Clone the Repository
-
-  git clone https://github.com/RahulShilimkarCodes/SeleniumAutomationFramework.git
-  cd SeleniumAutomationFramework
-
-🧪 ### Running the tests
-▶️ Run Tests on LambdaTest
-  mvn test -Dbrowser=chrome -DisLambdaTest=true -DisHeadless=false -X
-
-▶️ Run Tests Locally on Chrome (Headless Mode)
-  mvn test -Dbrowser=chrome -DisLambdaTest=false -DisHeadless=true -X
-
-**📊 Reports & Logs
-📁 HTML Report**
-
-After execution, a detailed HTML report is generated at:
-./testExtentReport.html
-
-**The report includes:**
-Total tests executed
-Passed / Failed / Skipped counts
-Screenshots for failed tests
-
-**🧾 Logs**
-
-Logs are stored at:
-./logs/
-
-🤖 GitHub Actions Integration
-
-This project is integrated with GitHub Actions for continuous testing.
-
-🕒 Execution Time: Every day at 11:30 PM IST
-📦 Reports: Automatically archived in the gh-pages branch
-
-🌐 View HTML Reports: https://rahulshilimkarcodes.github.io/SeleniumAutomationFramework/testExtentReport.html
 
 
 
