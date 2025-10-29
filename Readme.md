@@ -42,13 +42,12 @@ Before running this framework, ensure the following are installed on your system
 
 ## 🛠️ Setup Instructions
 
-### 1️⃣ Clone the Repository
+###  Clone the Repository
 
-```bash
   git clone https://github.com/RahulShilimkarCodes/SeleniumAutomationFramework.git
   cd SeleniumAutomationFramework
 
-🧪 Running Tests
+🧪 ### Running the tests
 ▶️ Run Tests on LambdaTest
   mvn test -Dbrowser=chrome -DisLambdaTest=true -DisHeadless=false -X
 
@@ -79,5 +78,6 @@ This project is integrated with GitHub Actions for continuous testing.
 📦 Reports: Automatically archived in the gh-pages branch
 
 🌐 View HTML Reports: https://rahulshilimkarcodes.github.io/SeleniumAutomationFramework/testExtentReport.html
+
 
 
